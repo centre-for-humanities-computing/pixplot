@@ -3,7 +3,4 @@ output/
 .DS_Store
 *.pem
 *.swp
-VoresMuseum/images/
-node_modules/
 .idea
-package-lock.json
