@@ -1,5 +1,5 @@
 # CHCAA Pix plot docker container
-A clone of DHLab's pix plot repository ready for demonstrations with custom image files
+A fork of [DHLab's pix plot repository](https://github.com/YaleDHLab/pix-plot) for demonstrations with custom image collections
 
 ## About PixPlot
 
