@@ -129,7 +129,7 @@ class PixPlot:
       out_paths = []
       for i in sorted(self.sizes, key=int, reverse=True):
         out_dir = join(self.output_dir, 'thumbs', str(i) + 'px')
-        out_path = join( out_dir, get_filename(j) + '.jpg' )
+        out_path = join( out_dir, get_filename(j) + get_extension(j) )
         if os.path.exists(out_path) and not self.rewrite_image_thumbs:
           continue
         sizes.append(i)
@@ -439,6 +439,13 @@ def get_filename(path):
   Return the root filename of `path` without file extension
   '''
   return os.path.splitext( os.path.basename(path) )[0]
+
+
+def get_extension(path):
+  '''
+  Return the root filename of `path` without file extension
+  '''
+  return os.path.splitext( os.path.basename(path) )[1]
 
 
 def ensure_dir_exists(directory):
