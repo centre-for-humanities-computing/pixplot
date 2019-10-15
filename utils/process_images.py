@@ -433,6 +433,12 @@ def get_ascii_chars(s):
   '''
   return ''.join(i for i in s if ord(i) < 128)
 
+def set_extensions_to_lowercase(image_glob):
+  for path in image_glob:
+    index = path.index('.', -5)
+    extension = path[index]
+    os.rename(path, path[:index] + path[index:]
+
 
 def get_filename(path):
   '''
@@ -443,7 +449,7 @@ def get_filename(path):
 
 def get_extension(path):
   '''
-  Return the root filename of `path` without file extension
+  Return the extension of `path`
   '''
   return os.path.splitext( os.path.basename(path) )[1]
 
@@ -467,24 +473,25 @@ def main(*args, **kwargs):
   '''
   The main function to run
   '''
+  imagesPath
   # user specified glob path with tensorflow flags
   if FLAGS.image_files:
-    image_glob = glob(FLAGS.image_files)
+    imagesPath = FLAGS.image_files
   # one argument was passed; assume it's a glob of image paths
   elif len(sys.argv) == 2:
-    image_glob = glob(sys.argv[1])
-  # many args were passed; assume the user passed a glob
-  # path without quotes, and the shell auto-expanded them
-  # into a list of file arguments
-  elif len(sys.argv) > 2:
-    image_glob = sys.argv[1:]
-
+    imagesPath = sys.argv[1]
   # no glob path was specified
   else:
     print('Please specify a glob path of images to process\n' +
       'e.g. python utils/process_images.py "folder/*.jpg"')
 
+  image_glob = glob(image_path)
+  set_extensions_to_lowercase(image_glob)
+
+  image_glob = glob(image_path)
+
   PixPlot(image_glob)
 
 if __name__ == '__main__':
   tf.app.run()
+
