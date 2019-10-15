@@ -437,7 +437,7 @@ def set_extensions_to_lowercase(image_glob):
   for path in image_glob:
     index = path.index('.', -5)
     extension = path[index]
-    os.rename(path, path[:index] + path[index:]
+    os.rename(path, path[:index] + path[index:].lower()
 
 
 def get_filename(path):
