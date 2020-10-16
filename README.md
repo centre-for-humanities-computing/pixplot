@@ -53,7 +53,7 @@ docker run \
   -v "$(pwd)/output:/pixplot/output" \
   -v "$(pwd)/data/images:/pixplot/images" \
   pixplot \
-  bash -c "cd pixplot && python3.6 utils/process_images.py images/*"
+  bash -c "cd pixplot && python3.6 utils/process_images.py 'images/*'"
 ```
 
 You now have generated your pixplot. The next step will start a web server to host your plot on http://localhost:5000

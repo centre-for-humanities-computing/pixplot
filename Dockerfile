@@ -11,7 +11,7 @@ MAINTAINER Douglas Duhaime <douglas.duhaime@gmail.com>
 # Add repository that contains Python 3.6
 RUN apt-get update
 RUN apt-get install -y software-properties-common
-RUN add-apt-repository ppa:jonathonf/python-3.6
+RUN add-apt-repository ppa:deadsnakes/ppa
 RUN apt-get update
 
 # Install Python 3.6

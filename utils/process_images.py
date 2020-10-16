@@ -465,7 +465,7 @@ def main(*args, **kwargs):
   '''
   The main function to run
   '''
-  imagesPath
+  # imagesPath
   # user specified glob path with tensorflow flags
   if FLAGS.image_files:
     imagesPath = FLAGS.image_files
@@ -477,10 +477,10 @@ def main(*args, **kwargs):
     print('Please specify a glob path of images to process\n' +
       'e.g. python utils/process_images.py "folder/*.jpg"')
 
-  image_glob = glob(image_path)
+  image_glob = glob(imagesPath)
   set_extensions_to_lowercase(image_glob)
 
-  image_glob = glob(image_path)
+  image_glob = glob(imagesPath)
 
   PixPlot(image_glob)
 
