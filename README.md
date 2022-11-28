@@ -1,4 +1,4 @@
-# CHCAA Pix plot docker container
+# CHC Pix plot docker container
 A fork of [DHLab's pix plot repository](https://github.com/YaleDHLab/pix-plot) for demonstrations with custom image collections
 
 ## About PixPlot
@@ -76,6 +76,10 @@ After processing, you can curate the discovered hotspots by editing the resultin
 
 You can add, remove or re-order these, change the labels to make them more meaningful, and/or adjust the image that symbolizes each hotspot in the left-hand **Hotspots** menu.  *Hint: to get the name of an image that you feel better reflects the cluster, click on it in the visualization and it will appear suffixed to the URL.*
 
+## Project Adaptations ##
+
+1. SMK 2020
+2. Artistic Exchange 21-24
 
 ## Acknowledgements
 
